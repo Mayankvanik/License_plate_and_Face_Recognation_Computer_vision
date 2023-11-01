@@ -1,0 +1,31 @@
+path: E:/A Python/Practic Data/A green screen line  # dataset root dir
+train: train/ALL IMG/images  # train images (relative to 'path')
+val: train/ALL IMG/images  # val images (relative to 'path')
+
+depth_multiple: 0.33  # Backbone depth multiplier
+width_multiple: 0.50  # Backbone width multiplier
+
+batch-size: 15  # Batch size for training
+epochs: 100  # Number of training epochs
+
+momentum: 0.937  # Momentum for SGD optimizer
+weight-decay: 0.0005  # Weight decay for SGD optimizer
+
+
+# Learning rate and scheduler settings
+lr0: 0.01  # Initial learning rate
+lrf: 0.2  # Final learning rate
+lrs: 0.33  # Step value for learning rate scheduler
+
+# Loss function settings
+label-smooth: 0.0  # Label smoothing
+
+# Model architecture settings
+arch: yolov5s  # YOLO model architecture (yolov5s, yolov5m, yolov5l, yolov5x)
+
+# Pretrained weights (optional)
+weights: yolov5s.pt  # Path to pretrained weights
+# Classes
+names:
+  0: green_line
+  1: Dent
